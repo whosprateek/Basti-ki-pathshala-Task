@@ -1,0 +1,204 @@
+/*
+    Custom CSS for Basti ki Pathshala Website
+    August 3, 2025 - Delhi, India
+*/
+
+/* 1. Global Styles & Typography */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #F8F9FA; /* Off-white background */
+    color: #343A40;
+    padding-top: 70px; /* Adjust for fixed navbar */
+    overflow-x: hidden; /* Prevents horizontal scrollbar from animations */
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+/* 2. Custom Colors & Buttons */
+.text-primary { color: #F79F79 !important; }
+.text-secondary { color: #2C3E50 !important; }
+.bg-primary { background-color: #F79F79 !important; }
+.bg-secondary { background-color: #2C3E50 !important; }
+
+.btn {
+    transition: all 0.3s ease-in-out; /* Added Transition */
+}
+.btn-primary {
+    background-color: #F79F79;
+    border-color: #F79F79;
+    color: #fff;
+    padding: 10px 25px;
+    font-weight: 600;
+}
+.btn-primary:hover {
+    background-color: #f58d67;
+    border-color: #f58d67;
+    color: #fff;
+    transform: translateY(-3px); /* Added Hover Effect */
+    box-shadow: 0 4px 15px rgba(247, 159, 121, 0.4);
+}
+.btn-secondary {
+    background-color: #2C3E50;
+    border-color: #2C3E50;
+    color: #fff;
+}
+.btn-secondary:hover {
+    background-color: #1a2531;
+    border-color: #1a2531;
+    color: #fff;
+    transform: translateY(-3px); /* Added Hover Effect */
+}
+
+/* 3. Component Styles */
+.card {
+    transition: all 0.3s ease-in-out; /* Added Transition for cards */
+}
+.card:hover {
+    transform: translateY(-5px); /* Added Hover Effect */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Navbar */
+.navbar-brand {
+    color: #2C3E50 !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.nav-link {
+    font-weight: 600;
+    transition: color 0.3s ease; /* Added Transition */
+}
+.nav-link.active, .nav-link:hover {
+    color: #F79F79 !important;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2132') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+/* Page Header for About & Volunteer pages */
+.page-header {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+}
+
+/* Team Section Images */
+.team-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: -75px auto 0;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.footer {
+    background-color: #2C3E50;
+}
+.footer h5 {
+    color: #F79F79;
+}
+.footer p, .footer a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+.footer a:hover {
+    color: #fff;
+}
+
+
+/* 4. NEW: Timeline for About Us Page */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background-color: #F79F79;
+}
+.timeline-item {
+    position: relative;
+    width: 50%;
+    margin-bottom: 40px;
+}
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 50px;
+    text-align: right;
+}
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 50px;
+    text-align: left;
+}
+.timeline-dot {
+    content: '';
+    position: absolute;
+    top: 15px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 4px solid #F79F79;
+}
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -10.5px;
+}
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -10.5px;
+}
+.timeline-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.timeline-date {
+    font-weight: 700;
+    color: #F79F79;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 10px;
+    }
+    .timeline-item {
+        width: 100%;
+        text-align: left;
+        padding-left: 40px;
+        padding-right: 0;
+    }
+    .timeline-item:nth-child(odd) {
+        left: 0;
+    }
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    .timeline-dot {
+        left: 0;
+    }
+}
